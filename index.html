@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calender Event</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="evo-calendar.min.css" />
+    <link rel="stylesheet" href="evo-calendar.royal-navy.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div id="calendar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#calendar").evoCalendar({
+          theme: "Royal Navy",
+          calendarEvents: [
+            {
+              id: "event1", // Event's ID (required)
+              name: "New Year", // Event name (required)
+              date: "January/1/2022", // Event date (required)
+              type: "holiday", // Event type (required)
+              everyYear: true, // Same event every year (optional)
+            },
+            {
+              id: "event2",
+              name: "Vacation Leave",
+              date: ["February/13/2022", "February/15/2022"], // Date range
+              description: "Vacation leave for 3 days.", // Event description (optional)
+              type: "event",
+              color: "#63d867", // Event custom color (optional)
+            },
+            {
+              id: "event3",
+              name: "Exam Days",
+              date: ["March/13/2022", "March/20/2022"], // Date range
+              description: "Exams will be held", // Event description (optional)
+              type: "event",
+              color: "#63d867", // Event custom color (optional)
+            },
+            {
+              id: "event4",
+              name: "Labour Day",
+              date: "May/1/2022", // Date range
+              description: "Labour's Day", // Event description (optional)
+              type: "event",
+              color: "#63d867", // Event custom color (optional)
+              everyYear: true,
+            },
+            {
+              id: "event5",
+              name: "Independance Day",
+              date: ["August/14/2022", "August/15/2022"], // Date range
+              description: "Independance Day Leave", // Event description (optional)
+              type: "holiday",
+              color: "#63d867", // Event custom color (optional)
+              everyYear: true,
+            },
+            {
+              id: "event6",
+              name: "Winter Vocations",
+              date: ["December/13/2022", "December/25/2022"], // Date range
+              description: "Winter Holidays", // Event description (optional)
+              type: "holiday",
+              color: "#63d867", // Event custom color (optional)
+              everyYear: true,
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
